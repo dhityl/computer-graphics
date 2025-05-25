@@ -1,2 +1,6 @@
 # computer-graphics
-various graphics algorithms
+
+
+Various computer graphics algorithms written in python.
+
+Uses #pygame, #datetime.
