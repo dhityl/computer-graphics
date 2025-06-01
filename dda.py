@@ -11,6 +11,7 @@ screen = pygame.display.set_mode((WIDTH,HEIGHT))
 pygame.display.set_caption("DDA Line Algorithm")
 
 def draw_line_dda(x1,y1,x2,y2):
+    x1,x2,y1,y2 = int(x1),int(x2),int(y1),int(y2)
 
     dx = x2 - x1
     dy = y2 - y1
