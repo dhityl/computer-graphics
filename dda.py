@@ -26,7 +26,7 @@ def draw_line_dda(x1,y1,x2,y2):
     x, y  = x1, y1
     screen.set_at((round(x), round(y)), WHITE)
 
-    while x!=x2 or y!=y2:
+    for i in range(int(step)):
         x += xinc
         y += yinc
         screen.set_at((round(x), round(y)), WHITE)
@@ -41,7 +41,23 @@ def main():
 
         screen.fill(BLACK)
 
-        draw_line_dda(200, 800, 1000 , 400) # Call with coordinates for the line to draw
+
+        #make a house with dda lines
+        #roof
+        draw_line_dda(50, HEIGHT/3,  WIDTH/2, 50)
+        draw_line_dda(WIDTH/2, 50, WIDTH-50 , HEIGHT/3)
+
+        #frame
+        draw_line_dda(50, HEIGHT/3, WIDTH-50, HEIGHT/3)
+        draw_line_dda(50, HEIGHT/3, 50, HEIGHT-50)
+        draw_line_dda(50, HEIGHT-50, WIDTH-50, HEIGHT-50)
+        draw_line_dda(WIDTH-50, HEIGHT/3, WIDTH-50, HEIGHT-50)
+
+        #door
+        draw_line_dda(WIDTH/2-100, HEIGHT-50-400, WIDTH/2-100, HEIGHT-50)
+        draw_line_dda(WIDTH/2-100, HEIGHT-50-400, WIDTH/2+100, HEIGHT-50-400)
+        draw_line_dda(WIDTH/2+100, HEIGHT-50-400, WIDTH/2+100, HEIGHT-50)
+                      
         pygame.display.flip()
 
 if __name__ == "__main__":
