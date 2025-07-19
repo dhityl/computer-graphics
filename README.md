@@ -1,6 +1,4 @@
 # computer-graphics
 
 
-Various computer graphics algorithms written in python.
-
-Uses pygame, datetime.
+Various computer graphics algorithms taught in the IOE syllabus.
