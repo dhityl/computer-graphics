@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Transformation</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: gray;
+      }
+      .card {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        animation: mymove 2s infinite;
+      }
+      img {
+        border-radius: 3%;
+      }
+
+      @keyframes mymove {
+        0% {
+          top: -400px
+        }
+        90% {
+          top: 200px;
+          transform: rotateY(360deg) rotateZ(180deg) scale(2);
+        }
+        100% {
+          top: -400px;
+          transform: rotateX(360deg) rotateY(360deg) rotateZ(180deg) scale(0.5);
+        }
+      }
+
+      .container {
+        perspective: 800px;
+      }
+
+    </style>
+  </head>
+  <body>
+      <div class="card">
+        <img src = "https://tse1.explicit.bing.net/th/id/OIP.hJ3jbJa6lPjhz12eoAraWQHaJ2?rs=1&pid=ImgDetMain&o=7&rm=3" style="width:100px">
+    </div>
+  </body>
+</html>
